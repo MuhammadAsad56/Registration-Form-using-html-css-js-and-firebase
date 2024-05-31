@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="myForm">
+        <div class="container" id="container">
+            <!-- container start -->
+            <div class="heading">
+                <h2>Registration Form</h2>
+            </div>
+            <div class="firstName input">
+                <input type="text" id="firstName" placeholder="First name">
+            </div>
+            <div class="lastName input">
+                <input type="text" id="lastName" placeholder="Last name">
+            </div>
+            <div class="email input">
+                <input type="text" id="Email" placeholder="Email">
+            </div>
+            <div class="password input">
+                <input type="text" id="password" placeholder="Roll no">
+            </div>
+            <div class="btn">
+                <button id="btn" onclick="addData()">Register</button>
+            </div>
+            <div id="container1">
+                <table id="tabletr" class="table">
+                    <thead>
+                        <tr>
+                            <th>First name:</th>
+                            <th>Last name:</th>
+                            <th>Email:</th>
+                            <th>Roll no</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!-- container end -->
+    </form>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
