@@ -25,6 +25,7 @@ var Email = document.getElementById("Email");
 var password = document.getElementById("password");
 var myForm = document.getElementById("myForm")
 
+
 window.addData = function () {
     if (firstName.value && lastName.value && Email.value && password.value) {
         var obj = {
@@ -56,18 +57,31 @@ function getData() {
         console.log(arr)
         for (var i = 0; i < arr.length; i++) {
             allData = arr[i]
+            const {firstName, lastName,Email,password} = allData
 
             tabletr.innerHTML +=
                 `
         <tbody>
             <tr class="tr">
-                <td>${allData.firstName}</td>
-                <td>${allData.lastName}</td>
-                <td>${allData.Email}</td>
-                <td>${allData.password}</td>
+                <td>${firstName}</td>
+                <td>${lastName}</td>
+                <td>${Email}</td>
+                <td>${password}</td>
             </tr>
         </tbody>
         `
+        }
+        let tr = document.getElementsByTagName("tr")
+        window.myFun = function(){
+            let searchval = document.getElementById("searchid").value.toUpperCase()
+            for (var i =1 ; i < tr.length; i++){
+                let td = tr[i].getElementsByTagName("td")[0].innerText.toUpperCase()
+                if(td.indexOf(searchval) !== -1){
+                    tr[i].style.display = ""
+                }else{
+                    tr[i].style.display = "none"
+                }
+            }
         }
     })
 }
