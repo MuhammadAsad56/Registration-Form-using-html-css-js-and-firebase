@@ -52,9 +52,9 @@ function getData() {
     const reference = ref(db, "task/")
     onValue(reference, function (taskData) {
         allregistrationData = taskData.val()
-        console.log(allregistrationData, "k");
+        // console.log(allregistrationData, "k");
         var arr = Object.values(allregistrationData);
-        console.log(arr)
+        // console.log(arr)
         for (var i = 0; i < arr.length; i++) {
             allData = arr[i]
             const {firstName, lastName,Email,password} = allData
