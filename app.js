@@ -74,7 +74,7 @@ function getData() {
         let tr = document.getElementsByTagName("tr")
         window.myFun = function(){
             let searchval = document.getElementById("searchid").value.toUpperCase()
-            for (var i =1 ; i < tr.length; i++){
+            for (var i = 1; i < tr.length; i++){
                 let td = tr[i].getElementsByTagName("td")[0].innerText.toUpperCase()
                 if(td.indexOf(searchval) !== -1){
                     tr[i].style.display = ""
